@@ -3,8 +3,11 @@
     "module": "commonjs",
     "allowJs": true,
     "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "rootDir": "./src",
+    "target": "es6",
+    "outDir": "./dist"
   },
-  "include": ["./**/*.ts"]
+  "include": ["./src/*.ts"]
 }

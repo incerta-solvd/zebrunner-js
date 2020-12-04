@@ -1,1 +1,1 @@
-export default require('./dist')
+module.exports = require('./dist').default

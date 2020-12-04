@@ -1,6 +1,6 @@
 {
   "name": "zebrunner-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Low level reporting API for zebrunner service",
   "main": "index.js",
   "repository": "https://github.com/incerta-solvd/zebrunner-js",

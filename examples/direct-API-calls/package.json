@@ -1,0 +1,25 @@
+{
+  "name": "direct-API-calls",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@types/jest": "^26.0.16",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "cuid": "^2.1.8",
+    "dotenv": "^8.2.0"
+  }
+}

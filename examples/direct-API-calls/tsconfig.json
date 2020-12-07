@@ -3,11 +3,10 @@
     "module": "commonjs",
     "allowJs": true,
     "strict": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
-    "rootDir": "./lib",
     "target": "es6",
-    "outDir": "./dist"
   },
-  "include": ["./lib/*.ts"]
+  "include": ["./*.ts"]
 }

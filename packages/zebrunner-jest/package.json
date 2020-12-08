@@ -1,0 +1,19 @@
+{
+  "name": "zebrunner-jest",
+  "version": "0.0.1",
+  "description": "Zebrunner integration into jest reporters",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Konstantin Mazur",
+  "license": "ISC",
+  "dependencies": {
+    "zebrunner-js": "0.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2",
+    "@types/jest": "^26.0.16",
+    "@types/node": "^14.14.10"
+  }
+}

@@ -94,3 +94,28 @@ export type PublishTestArtifactRequest = {
 }
 
 export type PublishTestArtifactResponse = any
+
+// SESSIONS SECTION
+
+// Test session start reporting
+// POST /api/reporting/v1/test-sessions
+
+export type SessionStartReportingRequest = {
+  sessionId: string
+  startedAt?: string // ISO 8601
+  desiredCapabilities: string[]
+  capabilities: string[]
+  testRefs?: any[]
+}
+
+export type SessionStartReportingResponse = {} & SessionStartReportingRequest
+
+// Test session finish reporting
+// POST /api/reporting/v1/test-sessions/{sessionId}
+
+export type SessionFinishReportingRequest = {
+  endedAt?: string // ISO 8601
+  testRefs?: any[]
+}
+
+export type SessionFinishReportingResponse = {} & SessionFinishReportingRequest

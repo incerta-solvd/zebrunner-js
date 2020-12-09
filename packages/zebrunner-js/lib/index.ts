@@ -89,6 +89,23 @@ export default function makeZebrunnerAPI(cfg: {
       }
     )
 
+// SESSIONS SECTION
+
+  // @TODO currently method is not working due to error 500, code: REP-1000
+const sessionStartReporting = (data: DTO.SessionStartReportingRequest) =>
+client.post<DTO.SessionStartReportingResponse>(
+  `/api/reporting/v1/test-sessions`,
+  data
+)
+
+const sessionFinishReporting = (
+  sessionId: string,
+  data: DTO.SessionFinishReportingRequest) =>
+client.put<DTO.SessionFinishReportingResponse>(
+  `/api/reporting/v1/test-sessions/${sessionId}`,
+  data
+)
+
   return {
     testRunExecutionStart,
     testExecutionStartReporting,
@@ -97,6 +114,8 @@ export default function makeZebrunnerAPI(cfg: {
     testRunExecutionFinishReporting,
     sendTestExecutionLogs,
     sendTestScreenshot,
-    sendTestArtifact
+    sendTestArtifact,
+    sessionStartReporting,
+    sessionFinishReporting
   }
 }

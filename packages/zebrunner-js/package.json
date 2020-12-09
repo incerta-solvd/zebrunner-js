@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/incerta-solvd/zebrunner-js/packages/zebrunner-js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc -w"
   },
   "keywords": [],
   "author": "Konstantin Mazur",

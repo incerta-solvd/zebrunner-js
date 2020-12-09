@@ -1,0 +1,7 @@
+{
+    "env": {
+        "ZEBRUNNER_SERVICE_URL": "https://incerta.zebrunner.com",
+        "ZEBRUNNER_ACCESS_TOKEN": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwicGFzc3dvcmQiOiJLU2xYZG5oYlE1eXZFOXE0RUN4cEFvb1gyczRibzV4WCIsInRlbmFudCI6ImluY2VydGEiLCJpc3MiOiJpYW0iLCJleHAiOjM3NTQ5MDYyMzV9.6_GRXn8ylU2PkismscH-cMViRCyB6nv0zuAV4NdPcbs9_eOSvnAyTir9fWE_iQj7Xl4uTkXEaqonGf--AMH_vw",
+        "ZEBRUNNER_PROJECT_KEY": "zeb-js"
+      }
+}

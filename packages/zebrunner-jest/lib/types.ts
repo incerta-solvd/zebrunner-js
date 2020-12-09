@@ -31,7 +31,14 @@ export type Bytes = number
 
 export type Milliseconds = any
 
-export type AssertionResult = any
+export type AssertionResult = {
+  title: string
+  ancestorTitles: string[]
+  fullName: string
+  location: string
+  status: 'passed' | 'failed'
+  failureMessages: string
+}
 
 export type FormattedAssertionResult = Pick<
   AssertionResult,

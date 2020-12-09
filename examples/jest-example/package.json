@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test-and-report": "jest --reporters=../../packages/zebrunner-jest"
+    "test": "jest --reporters=../../packages/zebrunner-jest"
   },
   "keywords": [],
   "author": "",

@@ -37,8 +37,6 @@ describe('Check zebrunner API sessions methods', () => {
       testRefs: [123215, 123216, 123217, 123218],
     })
 
-    console.log('sessionStartReportingResponse===', response)
-
     expect(typeof response).toBe('object')
   })
 
@@ -48,8 +46,15 @@ describe('Check zebrunner API sessions methods', () => {
       testRefs: [123215, 123216, 123217, 123218],
     })
 
-    console.log('sessionFinishReportingResponse===', response)
-
     expect(typeof response).toBe('object')
+  })
+
+  it('"sessionPublishArtifact" should return object', async () => {
+    const response = await zeb.SessionPublishArtifact(sessionId, {
+      name: "jenkins-log-20200604.tar.gz",
+      url: "https://ci.organization.org/pipelines/jenkins-log-20200604.tar.gz",
+    });
+
+    expect(typeof response).toBe("object");
   })
 })

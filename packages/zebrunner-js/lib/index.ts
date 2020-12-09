@@ -106,6 +106,14 @@ client.put<DTO.SessionFinishReportingResponse>(
   data
 )
 
+const SessionPublishArtifact = (
+  sessionId: string,
+  data: DTO.SessionPublishArtifactRequest) =>
+client.post<DTO.SessionPublishArtifactResponse>(
+  `/api/reporting/v1/test-sessions/${sessionId}/artifact-refs`,
+  data
+)
+
   return {
     testRunExecutionStart,
     testExecutionStartReporting,
@@ -116,6 +124,7 @@ client.put<DTO.SessionFinishReportingResponse>(
     sendTestScreenshot,
     sendTestArtifact,
     sessionStartReporting,
-    sessionFinishReporting
+    sessionFinishReporting,
+    SessionPublishArtifact
   }
 }

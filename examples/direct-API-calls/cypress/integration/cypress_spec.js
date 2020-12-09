@@ -55,4 +55,15 @@ describe("Cypress Test Session", () => {
 
     expect(typeof response).to.equal("object");
   });
+
+  it('"sessionPublishArtifact" should return object', async () => {
+    const response = await zeb.SessionPublishArtifact(sessionId, {
+      name: "jenkins-log-20200604.tar.gz",
+      url: "https://ci.organization.org/pipelines/jenkins-log-20200604.tar.gz",
+    });
+
+    console.log("SessionPublishArtifactResponse===", response);
+
+    expect(typeof response).to.equal("object");
+  });
 });

@@ -111,11 +111,21 @@ export type SessionStartReportingRequest = {
 export type SessionStartReportingResponse = {} & SessionStartReportingRequest
 
 // Test session finish reporting
-// POST /api/reporting/v1/test-sessions/{sessionId}
+// PUT /api/reporting/v1/test-sessions/{sessionId}
 
 export type SessionFinishReportingRequest = {
-  endedAt?: string // ISO 8601
+  endedAt: string // ISO 8601
   testRefs?: any[]
 }
 
 export type SessionFinishReportingResponse = {} & SessionFinishReportingRequest
+
+// Test publishing test run artifacts
+// POST /api/reporting/v1/test-sessions/{sessionId}/artifact-refs
+
+export type SessionPublishArtifactRequest = {
+  name: string,
+  url: string
+}
+
+export type SessionPublishArtifactResponse = {} & SessionPublishArtifactRequest

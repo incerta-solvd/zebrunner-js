@@ -1,4 +1,5 @@
 import makeZebrunnerAPI from 'zebrunner-js'
+import readDotEnv from './read-dot-env'
 
 import type { Config } from '@jest/types'
 import type {
@@ -16,9 +17,11 @@ class ZebrunnerJestReporter {
   protected _zebrunner: ReturnType<typeof makeZebrunnerAPI>
 
   constructor(globalConfig: Config.GlobalConfig, options: any) {
-    const serviceURL = process.env['ZEBRUNNER_SERVICE_URL']
-    const projectKey = process.env['ZEBRUNNER_PROJECT_KEY']
-    const accessToken = process.env['ZEBRUNNER_ACCESS_TOKEN']
+    const dotenv = readDotEnv() as any
+
+    const serviceURL = process.env['ZEBRUNNER_SERVICE_URL'] || dotenv['ZEBRUNNER_SERVICE_URL']
+    const projectKey = process.env['ZEBRUNNER_PROJECT_KEY'] || dotenv['ZEBRUNNER_PROJECT_KEY']
+    const accessToken = process.env['ZEBRUNNER_ACCESS_TOKEN'] || dotenv['ZEBRUNNER_ACCESS_TOKEN']
 
     if (!serviceURL || !projectKey || !accessToken) {
       throw Error('One or many required .env variables missed')
@@ -47,7 +50,7 @@ class ZebrunnerJestReporter {
 
   onTestResult(test: Test, testResult: TestResult, aggregatedResult: AggregatedResult) {
     console.log('onTestResult')
-    // console.log(testResult.testResults[0].ancestorTitles)
+    console.log(testResult)
   }
 
   onRunComplete(contexts: Set<Context>, results: AggregatedResult) {

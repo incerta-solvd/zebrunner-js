@@ -45,6 +45,20 @@ describe("Cypress Test Session", () => {
     expect(typeof response).to.equal("object");
   });
 
+  describe("Test-cypress-describe", () => {
+    it('Finds the content "type", clicks, validating url', () => {
+      cy.visit("https://example.cypress.io");
+      cy.contains("type").click();
+      cy.url().should("include", "/commands/actions");
+    });
+
+    it("Filling e-mail field", () => {
+      cy.get(".action-email")
+        .type("fake@email.com")
+        .should("have.value", "fake@email.com");
+    });
+  });
+
   it('"sessionFinishReporting" should return object', async () => {
     const response = await zeb.sessionFinishReporting(sessionId, {
       endedAt: new Date().toISOString(),
